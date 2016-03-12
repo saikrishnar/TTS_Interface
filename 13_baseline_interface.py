@@ -14,8 +14,13 @@ last edited: October 2011
 
 import sys, os
 from PyQt4 import QtGui
+<<<<<<< HEAD
 #import pyttsx
 #engine=pyttsx.init()
+=======
+import pyttsx
+engine=pyttsx.init()
+>>>>>>> 3b84ff36ea38bc7f74c8aa3a502af5802b8f133a
 
 class Example(QtGui.QWidget):
     
@@ -50,6 +55,7 @@ class Example(QtGui.QWidget):
         #cmd = 'espeak ' + s
         #print cmd
         #os.system(cmd) 
+<<<<<<< HEAD
         #engine.say(s)
         #engine.runAndWait()
         cmd = 'echo s | festival --tts'
@@ -63,6 +69,16 @@ class Example(QtGui.QWidget):
         #engine.runAndWait()
         cmd = 'echo ' + str(text) + ' | festival --tts'
         os.system(cmd)
+=======
+        engine.say(s)
+        engine.runAndWait()
+ 
+    def readText(self):
+        text = self.te.toPlainText()
+        print text
+        engine.say(text)
+        engine.runAndWait()
+>>>>>>> 3b84ff36ea38bc7f74c8aa3a502af5802b8f133a
 
 def main():
     
